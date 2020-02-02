@@ -38,8 +38,19 @@ function createTableByForLoop(data)
     eTable += "<i id="+"ibutton"+"class=' "+fa+"' '></i>";
     eTable += "</button></form>";
     eTable += "</tr>";
+    
+    // try this instead
+    eTable += "<tr>";
+    eTable += "<td>"+data[i].gradelevel+"</td>";
+    eTable += "<td>";
+    eTable += "<div class ="+"col-sm-2 form-group pull-left"+">";
+    eTable += "<form method='post' action='http://localhost/pisara/create_class/update'>";
+    eTable += "<button type='submit' class='btn btn-default pull-left'>";
+    eTable += "<i id='ibutton"+"' class='"+fa+"'></i>";
+    eTable += "</button></form>";
+    eTable += "</tr>";
   }
-  $('#SYtable').html(eTable);
+  $('#SYtable').html(eTable);   
 }
 
 function addclass(){
